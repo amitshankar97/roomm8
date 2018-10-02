@@ -1,0 +1,164 @@
+Resources :
+    Users :
+        Properties :
+            - stuff
+        Description :
+            - value
+
+    Properties :
+        Properties :
+            - stuff
+        Description :
+            - value
+
+    Property Managers :
+        Properties :
+            - stuff
+        Description :
+            - value
+
+Endpoints :
+    /users
+        Method :
+            - GET
+        Attributes :
+            -
+        Description :
+            -
+
+    /users
+        Method :
+            - POST
+        Attributes :
+            -
+        Description :
+            - Creates a new temp user on signup
+
+    /users/{id}
+        Method :
+            - GET
+        Attributes :
+            -
+        Description :
+            - Returns the information about a specific user
+
+    /users/{id}
+        Method :
+            - PUT
+        Attributes :
+            - NOTE (all of the paramaters for the user must be present)
+        Description :
+            - Updates the all information on a user
+
+    /users/{id}
+        Method :
+            - UPDATE
+        Attributes :
+            -
+        Description :
+            - Updates the specified information on a user
+
+    /users/{id}/comments
+        Method :
+            - GET
+        Attributes :
+            -
+        Description :
+            - Updates the specified information on a user
+
+    /users/{id}/comments/{comment-id}
+        Method :
+            - UPDATE
+        Attributes :
+            -
+        Description :
+            - Updates the specified information on a user
+
+    /users/{id}/favorite-users
+        Method :
+            - GET
+        Attributes :
+            -
+        Description :
+            - Returns the user's favorite users
+
+    /users/{id}/favorite-users
+        Method :
+            - POST
+        Attributes :
+            - favorited user's ID
+                - Required : True
+        Description :
+            - Add a new favorite user
+
+    /users/{id}/favorite-users
+        Method :
+            - DELETE
+        Attributes :
+            - favorited user's ID
+                - Required : True
+        Description :
+            - Delete a user from the favorites list
+
+    /users/:id/comments
+
+/*
+ *
+ * Properties
+ *
+ */
+    /properties
+        Method :
+            - GET
+        Attributes :
+            -
+        Description :
+            - Returns a properties list
+
+    /properties
+        Method :
+            - POST
+        Attributes :
+            -
+        Description :
+            - Adds a property to the properties list
+
+    /*
+     * TODO
+     */
+    /properties/{id}
+
+    /*
+     * TODO
+     */
+    /properties/{id}/comments
+
+    /*
+     * Probably wont use `/properties/{id}/{comment-id}`
+     */
+
+    /user/{id}/favorite-properties
+        Method :
+            - GET
+        Attributes :
+            -
+        Description :
+            - Returns the user's favorite properties list
+
+    /user/{id}/favorite-properties
+        Method :
+            - POST
+        Attributes :
+            - favorited user's ID
+                - Required : True
+        Description :
+            - Add a property to the user's favorites list
+
+    /user/{id}/favorite-properties
+        Method :
+            - DELETE
+        Attributes :
+            - favorited property's ID
+                - Required : True
+        Description :
+            - Delete a property from the user's favorites list

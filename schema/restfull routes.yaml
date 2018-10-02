@@ -1,0 +1,62 @@
+paths:
+  /users
+    get:
+      summary:
+      description:
+      parameters:
+        - name
+          post:
+  /users/{user_id}
+    get:
+      summary:
+      description:
+      parameters:
+    put:
+      summary:
+      description:
+      parameters:
+    update:
+      summary:
+      description:
+      parameters:
+  /users/{user_id}/comments
+    get:
+
+    post:
+
+  /users/{user_id}/comments/{comment_id}
+    get:
+
+    update:
+
+  /users/{user_id}/favorite_users/
+    get:
+      
+    post:
+
+    delete:
+
+  /users/{user_id}/favorite_propreties/
+    get:
+
+    post:
+
+    delete:
+
+/*
+ * TODO
+ */
+
+  /properties/{property_id}
+    get:
+
+    update:
+
+  /properties/{property_id}
+    get:
+
+    update:
+
+  /property/{property_id}/comments
+    get:
+      l

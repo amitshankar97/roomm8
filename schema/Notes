@@ -1,0 +1,10 @@
+unit_features.js
+    - range_type & oven_type, I don't know how to best organize this
+    - TODO add evaporated cooling
+roommate finder:
+    - Disqualification :
+        smoking for non smoking
+        if preferred roommate != gender
+    -
+
+Favorited Users : With there being a potential for there to be multiple collections of active users and inactive users, how should i store a reference to the user. Maybe by document_Id, and as soon as someone goes offline do you loose connection to the user. If a user goes to view a list of all the favorited users, you should then remove the user if they are no longer found.
