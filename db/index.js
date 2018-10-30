@@ -7,19 +7,13 @@ var Property = mongoose.model('Property', PropertySchema);
 
 module.exports.createProperty = (property) => {
     let newProperty = new Property({
-        address: property.formatted_address,
-        location: [property.geometry.location.lng, property.geometry.location.lat],
         id: property.id,
-        place_id: property.place_id,
-        icon: property.icon,
-        name: property.name,
-        photos: property.photos,
-        rating: property.rating
+        roomm8_rating: 0,
+        comments: []
     });
 
     return newProperty.save();
 }
-
 
 module.exports.getProperty = (id) => {
     return new Promise((resolve, reject) => {
