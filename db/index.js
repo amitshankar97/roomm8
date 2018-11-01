@@ -35,7 +35,7 @@ module.exports.getProperties = (filter) => {
 
 module.exports.postComment = (comment) => {
     return new Promise((resolve, reject) => {
-        Property.find(comment.propertyID, (err, property) => {
+        Property.find({id: comment.propertyID}, (err, property) => {
             if(err) reject(err);
             property.comments = {...property.comments, ...comment};
             property.save(err => {reject(err);});
@@ -52,7 +52,9 @@ module.exports.appendDBProperties = async (googleProperties) => {
         let emptyProps = {
             roomm8_rating: -1,
             comments: [],
-            users: []
+            users: [],
+            next: '',
+            previous: ''
         };
 
         try {
@@ -60,7 +62,7 @@ module.exports.appendDBProperties = async (googleProperties) => {
             if(response === null) {
                 return {...prop, ...emptyProps};
             }
-            return {...response, ...prop};
+            return {...response, ...prop, next: '', previous: ''};
         }
         catch(err) {
             return {...prop, ...emptyProps};
